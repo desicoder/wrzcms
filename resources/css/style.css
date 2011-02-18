@@ -1,0 +1,936 @@
+/*
+/*
+Theme Name: Scherzo
+Theme URI: http://leonpaternoster.com/2009/10/introducing-the-scherzo-theme-for-wordpress/
+Description: A simple 2 column theme with clear, large and readable text. Includes page specific sidebars.
+Version: 1.6
+Author: Leon Paternoster
+Author URI: http://leonpaternoster.com
+Tags: white, two-columns, flexible-width, custom-background, custom-menu, threaded-comments, microformats, rtl-language-support
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/l<a href="http://leonpaternoster.com/scherzo/?p=15/#comments">4 comments</a>icenses/gpl-2.0.html
+*/
+
+
+/* CONTENTS
+
+1.		RESET AND HTML5 SETTINGS
+2.		BASE SETTINGS (HTML, BODY AND WRAPPER)
+3.		REUSABLE AND UNIVERSAL (LINKS, FORMS, IMAGE LINKS ETC.)
+4.		SITE HEADER
+5.		ARTICLES AND PAGES
+			5.1		Home page styles
+			5.2		Single styles
+			5.3		Page styles
+			5.4		Archive and search styles
+			5.5		Article header
+			5.6		Article content headings
+			5.7		Article content elements
+			5.8		Article content images
+			5.9		Article content tables
+			5.10	Article footer
+			5.11	Comments
+6.		ASIDES
+			6.1		Specific widget styles
+7.		FOOTER
+8.		PRINT STYLES (using @MEDIA)
+
+*/
+
+
+/* 1. RESET AND HTML5 SETTINGS 
+------------------------------*/ 
+
+body,
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+fieldset,
+dd {
+	margin:  0;
+	padding: 0;
+}
+
+article,
+aside,
+dialog,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+nav,
+section,
+small {
+    display: block;
+}
+
+
+/* 2. BASE SETTINGS (HTML, BODY AND WRAPPER)
+--------------------------------------------*/
+
+html {
+	background-color: #FFF;
+	color: #444;
+}
+
+body {
+	font-size: 100%;
+	line-height: 1.5em;
+	font-family: georgia, 'liberation serif', palatino, serif;
+	border-top: 0.25em solid #444;
+}
+
+#wrapper {
+	width: 51em;
+	margin: 0 auto;
+	background-image: none;
+	background-color: #FFF;
+	padding: 0 1em;
+}
+	
+
+/* 3. UNIVERSAL AND REUSABLE
+----------------------------*/
+
+#content {
+	clear: both;
+	width: 33em;
+	float: left;
+	margin-right: 3em;
+	display: inline;
+}
+
+#sidebar {
+	float: left;
+	width: 15em;
+}
+
+#quick-links {
+	display: none;
+}
+
+#site-footer {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #336699;
+}
+
+a:visited {
+	color: #77A3CE;
+}
+
+a:hover,
+a:active {
+	color: #FC0599;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+.imglink,
+.wp-caption a {
+	border: none;
+	text-decoration: none;
+	color: #FFF;
+}
+
+p,
+ul,
+ol,
+dd {
+	margin-bottom: 0.75em;
+}
+
+blockquote {
+	padding: 3em 0 3em 3em;
+	margin: 0;
+	color: #888;
+}
+
+code {
+	font-family: consolas, 'andale mono', 'courier new', monospace;
+	font-size: 1em;
+}
+
+legend {
+	border: none;
+}
+
+.hentry {
+	padding-bottom: 3em;
+}
+
+.archive-list {
+	list-style-type: none;
+	border-top: 0.0625em dotted #CFCFCF;
+	margin-top: -0.0625em;
+}
+
+.archive-list li a {
+	display: block;
+	padding: 0.375em 0;
+	border-bottom: 0.0625em dotted #CFCFCF;
+	margin-bottom: -0.0625em;
+}
+
+.pagination {
+	clear: both;
+	padding: 3em 0 1.5em 0;
+}
+
+.pagination p {
+	margin-bottom: 0;
+}
+
+
+/* 4. SITE HEADER
+-----------------*/
+
+#site-header {
+	padding-top: 1.5em;
+}
+
+#site-title {
+	font-size: 1em;
+	font-weight: bold;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#site-title a:link,
+#site-title a:visited {
+	color: #336699;
+}
+
+#site-title a:hover,
+#site-title a:active {
+	color: #FC0599;
+}
+
+#tag {
+	font-size: 0.833em;
+	color: #AAA;
+	font-weight: normal;
+	margin-bottom: 5.402em;
+}
+
+#site-nav {
+	margin-bottom: 4.5em;
+	float: left;
+	width: 33em;
+	text-align: right;
+}
+
+#site-nav ul li {
+	display: inline;
+	margin-left: 2em;
+	font-size: 0.75em;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#site-nav ul li a:link,
+#site-nav ul li a:visited {
+	color: #AAA;
+}
+
+#site-nav ul li a:hover,
+#site-nav ul li a:active {
+	color: #444;
+	border-bottom: 0.1667em solid #444;
+}
+
+#site-nav ul li.current-menu-item a {
+	border-bottom: 0.1667em solid #444;
+}
+
+
+/* 5. ARTICLES AND PAGES
+------------------------*/
+
+
+/* 5.1 Home page styles
+-----------------------*/
+
+
+/* 5.2 Single styles
+--------------------*/
+
+.single .entry-summary {
+	font-size: 1.167em;
+	margin-bottom: 1.285em;
+}
+
+
+/* 5.3 Page styles
+------------------*/
+
+
+/* 5.4 Archive and search styles
+--------------------------------*/
+
+
+/* 5.5 Article header
+---------------------*/
+
+.entry-title,
+.page-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	padding: 0.667em 0 0.333em 0;
+}
+
+.entry-meta p,
+.entry-meta ul {
+	font-size: 0.833em;
+	color: #888;
+	margin-bottom: 1.801em;
+}
+
+
+/* 5.6 Article content headings
+-------------------------------*/
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content dt {
+	font-weight: normal;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+.entry-content h1,
+.entry-content h2 {
+	font-size: 1.333em;
+	padding: 0.75em 0 0.375em 0;
+}
+
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content dt {
+	font-size: 1.167em;
+	padding: 0.857em 0 0.428em 0;
+}
+
+
+/* 5.7 Article content elements
+-------------------------------*/
+
+.entry-content li {
+	margin-left: 1.25em;
+}
+
+.entry-content cite {
+	font-style: normal;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	letter-spacing: 0.0625em;
+	color: #444;
+}
+
+.entry-content pre {
+	overflow: auto;
+	display: block;
+	font-size: 1em;
+	padding: 1.5em;
+	color: #AF0000;
+}
+
+/* 5.8 Article content images
+-----------------------------*/
+
+.wp-caption,
+.gallery-caption  {
+	display: block;
+	max-width: 100%;
+	padding: 1.438em 0;
+}
+
+.entry-content img {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #EFEFEF;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+	padding: 1.4375em auto;
+}
+
+.alignleft {
+	float: left;
+	display: inline;
+	margin-right: 2.25em;
+}
+
+.alignright {
+	float: right;
+	display: inline;
+	margin-left: 2.25em;
+}
+
+p.wp-caption-text {
+	margin-bottom: 0;
+	font-size: 0.833em;
+	line-height: 1.351em;
+}
+
+
+/* 5.9 Article content tables
+-----------------------------*/
+
+.entry-content table {
+	width: 100%;
+	margin: 1.5em 0;
+	border-collapse: collapse;
+	border: 0.0625em solid #EFEFEF;
+}
+
+.entry-content tr {
+	font-size: 0.75em;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+.entry-content td {
+	padding: 0.25em 0;
+}
+
+.entry-content tbody tr:nth-child(even) {
+	background-color: #EFEFEF;
+}
+
+.entry-content th,
+.entry-content tbody td {
+	text-align: left;
+	padding-left: 0.25em;
+	margin: 0;
+}
+
+.entry-content th {
+	font-weight: normal;
+	font-size: 1.333em;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	background-color: #444;
+	color: #FFF;
+}
+
+.entry-content table caption {
+	font-size: 0.75em;
+	font-family: georgia, 'liberation serif', palatino, serif;
+	font-style: italic;
+	text-align: left;
+}
+
+.entry-content tfoot tr {
+	font-size: 0.75em;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	color: #AAA;
+}
+
+
+/* 5.10 Article footer
+----------------------*/
+
+.entry-footer {
+	padding-top: 0.75em;
+}
+
+.entry-taxonomy {
+	padding-bottom: 0.75em;
+}
+
+.entry-taxonomy p {
+	font-size: 0.833em;
+	line-height: 1.351em;
+	margin-bottom: 0;
+}
+
+
+/* 5.11 Comments
+----------------*/
+
+#comments {
+	padding-top: 3em;
+}
+
+.comment-heading,
+#reply-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 0.667em 0 0.333em 0;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	font-weight: normal;
+
+}
+
+.form-allowed-tags {
+	font-size: 0.75em;
+}
+
+.page-numbers {
+	font-size: 0.75em;
+	padding-left: 1em;
+}
+
+.current {
+	font-weight: bold;
+}
+
+.bypostauthor {
+	padding: auto;
+	background-color: #FFF;
+}
+
+.avatar {
+	float: left;
+	margin-right: 0.75em;
+	margin-bottom: 0.75em;
+}
+
+.says {
+	display: none;
+}
+
+.reply {
+	display: block;
+	font-size: 1em;
+	margin-bottom: 3em;
+}
+
+.vcard {
+	padding-top: 0.75em;
+}
+
+.fn {
+	font-style: normal;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	font-size: 1.333em;
+	display: block;
+	float: left;
+}
+
+.comment-meta {
+	font-size: 0.833em;
+	margin-bottom: 0.9em;
+	clear: both;
+}
+
+.commentlist li {
+	list-style-type: none;
+}
+
+.pinglist li {
+	font-size: 0.75em;
+	color: #AAA;
+	list-style-type: none;
+}
+
+.children li {
+	padding-left: 2.25em;
+	margin-left: 2.25em;
+	border-left: 0.0625em dotted #CFCFCF;
+}
+
+#commentform label {
+	font-size: 0.75em;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#author,
+#email,
+#url,
+#commentform textarea {
+	display: block;
+	width: 32.375em;
+	border: 1px solid #CFCFCF;
+	font-family: georgia, 'liberation serif', palatino, serif;
+}
+
+#author,
+#email,
+#url {
+	margin-bottom: 0.5em;
+	padding: 0.25em;
+	font-size: 1em;
+	width: 14.375em;
+}
+
+#commentform textarea {
+	display: block;
+	font-family: consolas, 'andale mono', 'courier new', monospace;
+	font-size: 1em;
+	padding: 0.25em;
+	height: 12em;
+}
+
+#submit {
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	cursor: pointer;
+}
+
+.form-allowed-tags {
+	font-size: 0.833em;
+	line-height: 1.351em;
+}
+
+.subscribe-to-comments {
+	margin-bottom: 0;
+}
+
+.subscribe-to-comments #subscribe {
+	float: left;
+	margin-right: 2px;
+}
+
+.subscribe-to-comments label {
+	float: left;
+	margin-bottom: 0 !important;
+}
+
+
+/* 6. ASIDES
+------------*/
+
+#sidebar {
+	color: #888;
+	font-size: 100%;
+	line-height: 1.125em;
+}
+
+.sidebar p ,
+.sidebar ul{
+	font-size: 0.833em;
+	margin-bottom: 0.675em;
+}
+
+.sidebar ul {
+	border-top: 1px dotted #CFCFCF;
+	margin-top: -1px;
+}
+
+.sidebar ul li {
+	list-style-type: none;
+	padding: 0.675em 0;
+	border-bottom: 1px dotted #CFCFCF;
+	margin-bottom: -1px;
+}
+
+.sidebar ul li ul,
+ul.sub-menu {
+	font-size: inherit;
+	margin-left: 0;
+	padding-left: 0;
+	border-top: 0;
+}
+
+.sidebar ul li ul li,
+ul.sub-menu li {
+	padding-left: 1.5em;
+}
+
+.widgetContainer {
+	padding-bottom: 1.5em;
+}
+
+.widgetTitle {
+	font-size: 1.167em;
+	font-weight: normal;
+	padding: 0.643em 0 0.321em 0;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+.widgetContainer ul li a {
+	
+}
+
+
+/* 6.1 Specific widget styles
+-----------------------------*/
+
+#wp-calendar table {
+	width: 100%;
+	margin: 1.5em 0;
+	border-collapse: collapse;
+	border: 0.0625em solid #CCC;
+}
+
+#wp-calendar tr {
+	font-size: 0.75em;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#wp-calendar tbody tr:nth-child(even) {
+	background-color: #DFDFDF;
+}
+
+#wp-calendar th,
+#wp-calendar tbody td {
+	text-align: left;
+	padding-left: 0.25em;
+	margin: 0;
+}
+
+#wp-calendar th {
+	font-weight: bold;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	background-color: #444;
+	color: #FFF;
+}
+
+#wp-calendar table caption {
+	font-size: 0.75em;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	text-align: left;
+}
+
+#wp-calendar tfoot tr {
+	font-size: 0.75em;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	color: #AAA;
+}
+
+.sidebar .screen-reader-text {
+	display: none;
+}
+
+.recentcomments {
+	padding: 0.5em 0;
+}
+
+.widget_recent_comments a {
+	font-style: normal;
+}
+
+.widget_recent_comments a.url {
+	font-style: italic;
+}
+
+.sidebar #searchform{
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#s {
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	font-size: 0.75em;
+	width: 13.75em;
+}
+
+#searchsubmit {
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	cursor: pointer;
+	font-size: 0.75em;
+}
+
+.widget_tag_cloud a:link,
+.widget_tag_cloud a:visited {
+	font-size: 0.833em !important;
+	background-color: #EFEFEF;
+	padding: 0.25em;
+}
+
+.widget_tag_cloud a:hover,
+.widget_tag_cloud a:active {
+	font-size: 0.833em  !important;
+	padding: 0.25em;
+}
+
+
+/* 7. FOOTER
+------------*/
+
+#site-footer {
+        text-align: center;
+	clear: both;
+	padding: 3em 0 1.5em 0;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#site-footer small {
+	font-size: 0.833em;
+	line-height: 1.351em;
+}
+
+
+/* 8. PRINT STYLES
+------------------*/
+
+@media print {
+
+#sidebar, #site-nav, #comments, .entry-footer {
+	display: none;
+}
+
+body {
+	font-family: times, baskerville, garamond, serif;
+	font-size: 100%;
+	line-height: 1.5em;
+}
+
+/* Copy some stuff from the screen stylesheet */
+
+#site-title {
+	font-family: 'helvetica neue', arial, helvetica, 'deja vu sans', sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 3em;
+}
+
+#site-title a:link,
+#site-title a:visited {
+	color: #336699;
+	text-decoration: none;
+}
+
+#site-title a:hover,
+#site-title a:active {
+	color: #DF0000;
+}
+
+#tag {
+	color: #AAA;
+	font-family: 'helvetica neue', arial, helvetica, 'deja vu sans', sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+a:link {
+	color: #336699;
+}
+
+a:visited {
+	color: #336699;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+.imglink {
+	border: none;
+	text-decoration: none;
+	color: #FFF;
+}
+
+p,
+ul,
+ol,
+dd {
+	margin-bottom: 12px;
+}
+
+.entry-title {
+	font-family: 'helvetica neue', arial, helvetica, 'deja vu sans', sans-serif;
+	font-size: 48px;
+	line-height: 48px;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content dt {
+	font-family: 'helvetica neue', arial, helvetica, 'deja vu sans', sans-serif;
+	margin: 20px 0 4px 0;
+}
+
+.entry-content h1 {
+	font-size: 16px;
+}
+
+.entry-content h2,
+.entry-content dt  {
+	font-size: 14px;
+}
+
+.entry-content h3 {
+	font-size: 12px;
+}
+
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	font-size: 12px;
+}
+
+.entry-content table {
+	width: 100%;
+	margin: 24px 0;
+	border-collapse: collapse;
+	border: 1px solid #CCC;
+}
+
+.entry-content tr {
+	font-size: 12px;
+	font-family: 'helvetica neue', arial, helvetica, 'deja vu sans', sans-serif;
+}
+
+.entry-content tbody tr:nth-child(even) {
+	background-color: #DFDFDF;
+}
+
+.entry-content th,
+.entry-content tbody td {
+	text-align: left;
+	padding-left: 3px;
+	margin: 0;
+}
+
+.entry-content th {
+	font-weight: bold;
+	font-family: 'helvetica neue', arial, helvetica, 'deja vu sans', sans-serif;
+	background-color: #444;
+	color: #FFF;
+}
+
+.entry-content table caption {
+	font-size: 12px;
+	font-family: 'helvetica neue', arial, helvetica, 'deja vu sans', sans-serif;
+	text-align: left;
+}
+
+.entry-content tfoot tr {
+	font-size: 12px;
+	font-family: 'helvetica neue', arial, helvetica, 'deja vu sans', sans-serif;
+	color: #AAA;
+}
+
+}

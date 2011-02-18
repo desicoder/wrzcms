@@ -1,0 +1,35 @@
+body {  
+    direction: rtl;  
+    unicode-bidi: embed;  
+} 
+
+#content {
+	clear: both;
+	float: right;
+	width: 33em;
+	margin-left: 3em;
+	display: inline;
+}
+
+#sidebar {
+	float: right;
+	width: 15em;
+}
+
+#site-title {
+	font-size: 1.5em;
+	line-height: 1em;
+	font-weight: bold;
+	font-family: arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	float: right;
+	display: inline;
+	width: 10em;
+	margin-left: 2em;
+}
+
+#site-nav {
+	margin-bottom: 4.5em;
+	float: right;
+	width: 33em;
+	text-align: left;
+}
